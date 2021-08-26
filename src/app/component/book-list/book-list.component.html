@@ -1,0 +1,47 @@
+<div>
+  <a class="btn btn-primary" routerLink="/books/create">Tạo mới sách</a>
+  <table class="table table-primary">
+    <thead>
+    <tr>
+      <td>*</td>
+      <td>Tên sách</td>
+      <td>Tác giả</td>
+      <td colspan="2"></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of books;index as i">
+      <td>{{i + 1}}</td>
+      <td><a [routerLink]="['/books/view',b.id]">{{b.title}}</a></td>
+      <td>{{b.author}}</td>
+      <td><a class="btn btn-light" [routerLink]="['/books/edit',b.id]">Edit</a></td>
+      <td><a class="btn btn-danger" [routerLink]="['/books/delete',b.id]">Delete</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<hr>-->
+
+<!--<table mat-table [dataSource]="books" class="mat-elevation-z8 demo-table">-->
+<!--  <ng-container >-->
+<!--    <th mat-header-cell *matHeaderCellDef>-->
+<!--      <tr>-->
+<!--        <td>*</td>-->
+<!--        <td>Tên sách</td>-->
+<!--        <td>Tác giả</td>-->
+<!--        <td colspan="2"></td>-->
+<!--      </tr>-->
+<!--    </th>-->
+<!--    <tr mat-row *ngFor="let b of books;index as i">-->
+<!--      <td>{{i + 1}}</td>-->
+<!--      <td>{{b.title}}</td>-->
+<!--      <td>{{b.author}}</td>-->
+<!--      &lt;!&ndash;    <td><a [routerLink]="['/books/edit',b.id]">Edit</a></td>&ndash;&gt;-->
+<!--      &lt;!&ndash;    <td><a [routerLink]="['/books/delete',b.id]">Delete</a></td>&ndash;&gt;-->
+<!--    </tr>-->
+<!--  </ng-container>-->
+
+<!--  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+<!--</table>-->

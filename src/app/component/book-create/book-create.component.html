@@ -1,0 +1,24 @@
+<h1>Tạo sách mới</h1>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <table class="table-striped w-25">
+    <tr>
+      <td>Tên sách</td>
+      <td><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Tác giả sách</td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sách</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button class="btn btn-primary">Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
